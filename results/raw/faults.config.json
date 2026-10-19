@@ -1,0 +1,39 @@
+{
+  "scales": [
+    640
+  ],
+  "cases": 200,
+  "rates": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4
+  ],
+  "deadline_ms": 60,
+  "timeout_sleep_ms": 150,
+  "conditions": [
+    "full",
+    "full_nofallback",
+    "adhoc",
+    "adhoc_inline"
+  ],
+  "ablation_rates": [
+    0.0,
+    0.2
+  ],
+  "ablation_conditions": [
+    "no_eb",
+    "no_dg",
+    "no_if"
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "warmup": 10
+}

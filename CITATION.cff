@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the article below."
+title: "AINA contracts harness: prototype and evaluation for explicit semantic contracts in AI-native distributed systems"
+authors:
+  - family-names: Shanker
+    given-names: Ashutosh
+    orcid: "https://orcid.org/0009-0007-4687-7843"
+    affiliation: "Palo Alto Networks, Inc."
+license: MIT
+preferred-citation:
+  type: article
+  title: "AI-Native Network Architecture: Explicit Contracts for Semantic Intent, Cognitive Artifacts, and Autonomous Coordination in Distributed Intelligent Systems"
+  authors:
+    - family-names: Shanker
+      given-names: Ashutosh
+  journal: "International Journal of Electrical and Computer Engineering (IJECE)"
+  status: submitted

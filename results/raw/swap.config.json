@@ -1,0 +1,39 @@
+{
+  "scales": [
+    640
+  ],
+  "cases": 100,
+  "rates": [
+    0.0
+  ],
+  "deadline_ms": 5000,
+  "timeout_sleep_ms": 0,
+  "conditions": [
+    "full",
+    "no_eb",
+    "no_dg",
+    "no_if",
+    "adhoc"
+  ],
+  "variants": [
+    "as_is",
+    "shape_mismatch",
+    "field_mismatch",
+    "tuple",
+    "all_matches",
+    "dict_results",
+    "docs_relevance",
+    "snippet",
+    "records_conf",
+    "tuple_ret",
+    "nested_ret"
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "warmup": 10
+}

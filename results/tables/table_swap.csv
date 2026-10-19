@@ -1,0 +1,12 @@
+variant,aspects changed,full swap success (seeds),no_dg swap success (seeds),no_if swap success (seeds),no_eb swap success (seeds),adhoc swap success (seeds),ad hoc consumer edits,no_eb consumer edits,layered consumer edits,layered producer adapter (LOC)
+as_is,-,5/5,5/5,5/5,5/5,5/5,0,0,0,2
+shape_mismatch,container,5/5,5/5,5/5,0/5,0/5,1,1,0,2
+field_mismatch,field_rec field_score,5/5,5/5,5/5,0/5,0/5,1,1,0,2
+tuple,item_shape,5/5,5/5,5/5,0/5,0/5,1,1,0,2
+all_matches,container op_name ordering,5/5,5/5,5/5,0/5,0/5,2,1,0,3
+dict_results,container,5/5,5/5,5/5,0/5,0/5,1,1,0,2
+docs_relevance,container field_rec field_score op_name,5/5,5/5,5/5,0/5,0/5,3,2,0,2
+snippet,field_rec record_encoding,5/5,5/5,5/5,0/5,0/5,2,2,0,9
+records_conf,container item_shape op_name,5/5,5/5,5/5,0/5,0/5,3,2,0,2
+tuple_ret,container,5/5,5/5,5/5,0/5,0/5,1,1,0,2
+nested_ret,container,5/5,5/5,5/5,0/5,0/5,1,1,0,2

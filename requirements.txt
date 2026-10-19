@@ -1,0 +1,4 @@
+# The prototype and experiments use only the Python standard library (Python 3.9+).
+# The analysis script and figures additionally need:
+numpy>=1.24
+matplotlib>=3.7

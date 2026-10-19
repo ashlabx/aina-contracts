@@ -1,0 +1,29 @@
+{
+  "scales": [
+    640
+  ],
+  "cases": 200,
+  "rates": [
+    0.0
+  ],
+  "deadline_ms": 5000,
+  "timeout_sleep_ms": 0,
+  "conditions": [
+    "full",
+    "slim",
+    "adhoc",
+    "adhoc_inline",
+    "no_if",
+    "no_if_nodrift",
+    "no_eb",
+    "no_dg"
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "warmup": 10
+}

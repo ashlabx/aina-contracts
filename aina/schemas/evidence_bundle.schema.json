@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aina:contract:EvidenceBundle:1",
+  "title": "EvidenceBundle",
+  "description": "Cognitive Processing Layer contract. Backend-independent representation of retrieved evidence or derived reasoning observations. Produced by a producer-side adapter; validated by the receiving boundary.",
+  "type": "object",
+  "required": [
+    "contract",
+    "contract_version",
+    "bundle_id",
+    "frame_ref",
+    "producer",
+    "query",
+    "status",
+    "evidence_items",
+    "provenance",
+    "salience",
+    "notes"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "contract": {
+      "const": "EvidenceBundle"
+    },
+    "contract_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "bundle_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "frame_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "producer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "query": {
+      "type": "object"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "empty"
+      ]
+    },
+    "evidence_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item_id",
+          "source",
+          "kind",
+          "ts",
+          "host",
+          "attrs",
+          "indicator_ids"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "enum": [
+              "siem",
+              "edr",
+              "derived"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ts": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "host": {
+            "type": "string"
+          },
+          "attrs": {
+            "type": "object"
+          },
+          "indicator_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "backend",
+        "adapter",
+        "record_ids"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "backend": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adapter": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "salience": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "notes": {
+      "type": "object",
+      "description": "Structured reasoning annotations. Fields that consumers depend on are typed; others are free-form.",
+      "properties": {
+        "category_scores": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "sources_present": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "siem",
+              "edr"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
